@@ -1,0 +1,15 @@
+# ------------------------------------------------------------
+# General settings
+# ------------------------------------------------------------
+seed: 42
+
+# ------------------------------------------------------------
+# Data settings
+# ------------------------------------------------------------
+data:
+  root: data            # folder where MNIST is downloaded
+  batch_size: 64        # how many images the model sees at once
+  val_size: 5000        # images taken from training data for validation
+  num_workers: 2        # helper processes that load data in the background
+  mean: [0.1307]        # average pixel value of MNIST (for normalization)
+  std: [0.3081]         # spread of pixel values in MNIST (for normalization)
