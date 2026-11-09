@@ -13,3 +13,11 @@ data:
   num_workers: 2        # helper processes that load data in the background
   mean: [0.1307]        # average pixel value of MNIST (for normalization)
   std: [0.3081]         # spread of pixel values in MNIST (for normalization)
+
+
+model:
+  conv1_channels: 32    # number of filters in the first Conv2d layer
+  conv2_channels: 64    # number of filters in the second Conv2d layer
+  hidden_units: 128     # size of the first Linear layer
+  dropout: 0.25         # fraction of values switched off during training
+  num_classes: 10       # number of possible answers (digits 0–9)
