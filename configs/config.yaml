@@ -1,10 +1,7 @@
-
 # General settings
 seed: 42
 
-
 # Data settings
-
 data:
   root: data            # folder where MNIST is downloaded
   batch_size: 64        # how many images the model sees at once
@@ -13,9 +10,7 @@ data:
   mean: [0.1307]        # average pixel value of MNIST (for normalization)
   std: [0.3081]         # spread of pixel values in MNIST (for normalization)
 
-
 # model settings
-
 model:
   conv1_channels: 32    # number of filters in the first Conv2d layer
   conv2_channels: 64    # number of filters in the second Conv2d layer
@@ -23,11 +18,12 @@ model:
   dropout: 0.25         # fraction of values switched off during training
   num_classes: 10       # number of possible answers (digits 0–9)
 
-
-
 # Training settings
-
 training:
   epochs: 5                                  # full passes through the training data
   learning_rate: 0.001                       # step size for the optimizer
   checkpoint_path: checkpoints/best_model.pt # where the best model is saved
+
+# Evaluation settings
+evaluation:
+  confusion_matrix_path: outputs/confusion_matrix.png   # where the image is saved
